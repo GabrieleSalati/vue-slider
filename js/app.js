@@ -37,6 +37,10 @@ createApp({
             else {
                 this.movie.activeImage++;
             }
+        },
+
+        switchActive(index) {
+            this.movie.activeImage = index;
         }
     }
 }).mount('#root')
