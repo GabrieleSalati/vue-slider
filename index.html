@@ -44,7 +44,7 @@
 
 				<div class="my-carousel-thumbs" id="thumbs-container">
 					<img :src="image" v-for="(image, index) in movie.images" class="thumb"
-						:class="(index == 0) ? 'active' : ''" alt="thumbnails">
+						:class="(index == movie.activeImage) ? 'active' : ''" alt="thumbnails">
 				</div>
 			</div>
 

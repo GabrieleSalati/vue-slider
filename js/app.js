@@ -22,11 +22,21 @@ createApp({
 
     methods: {
         previous() {
-            this.movie.activeImage--
+            if (this.movie.activeImage - 1 < 0) {
+                this.movie.activeImage = this.movie.images.length - 1;
+            }
+            else {
+                this.movie.activeImage--;
+            }
         },
 
         next() {
-            this.movie.activeImage++
+            if (this.movie.activeImage + 1 >= this.movie.images.length) {
+                this.movie.activeImage = this.movie.activeImage = 0;
+            }
+            else {
+                this.movie.activeImage++;
+            }
         }
     }
 }).mount('#root')
