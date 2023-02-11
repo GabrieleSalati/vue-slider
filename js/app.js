@@ -14,7 +14,19 @@ createApp({
                     "img/image4.jpg",
                     "img/image5.jpg"
                 ],
+
+                activeImage: 0
             }
+        }
+    },
+
+    methods: {
+        previous() {
+            this.movie.activeImage--
+        },
+
+        next() {
+            this.movie.activeImage++
         }
     }
 }).mount('#root')

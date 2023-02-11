@@ -39,7 +39,7 @@
 		<div class="my-carousel-container">
 			<div class="my-carousel">
 				<div class="my-carousel-main" id="slides-container">
-					<img src="image" alt="">
+					<img :src="movie.images[movie.activeImage]" alt="MainImage">
 				</div>
 
 				<div class="my-carousel-thumbs" id="thumbs-container">
@@ -56,7 +56,7 @@
 
 			<div class="my-carousel-controls">
 
-				<button class="btn btn-outline-dark" id="prev">
+				<button class="btn btn-outline-dark" id="prev" @click="previous()">
 					<i class="fa-solid fa-chevron-left"></i>
 				</button>
 
@@ -68,7 +68,7 @@
 					<i class="fa-solid fa-stop"></i>
 				</button>
 
-				<button class="btn btn-outline-dark" id="next">
+				<button class="btn btn-outline-dark" id="next" @click="next()">
 					<i class="fa-solid fa-chevron-right"></i>
 				</button>
 			</div>
