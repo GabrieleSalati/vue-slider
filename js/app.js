@@ -42,5 +42,11 @@ createApp({
         switchActive(index) {
             this.movie.activeImage = index;
         }
-    }
+    },
+
+    created() {
+        setInterval(() => {
+            this.next();
+        }, 3000)
+    },
 }).mount('#root')
